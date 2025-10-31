@@ -1,45 +1,83 @@
-# Logiclead FASTag Recharge (Frontend Only)
+# 🪙 Logiclead FASTag Recharge (Fullstack – Client + Server)
 
-A modern *frontend-only React + Tailwind CSS design* for [Logiclead.in](https://logiclead.in).  
-This project focuses on *UI/UX design only* — no backend, API, or payment integration is included.
+A **full-stack FASTag recharge project** built with **React.js (frontend)** and **Node.js + Express (backend)**.  
+Originally a frontend-only UI, this version now includes a working **login flow** with backend setup and database configuration support.
 
 ---
 
-## 🪶 Features
+## ✨ Features
 
-- ⚡ FASTag recharge form (frontend only)
+### 🖥 Frontend (Client)
+- ⚡ FASTag recharge form (React + Tailwind)
 - 🏦 Provider logos grid
-- 🧩 Fully responsive layout using Tailwind CSS
 - 💬 FAQ Accordion section
-- 🎨 Clean and modern React UI design
-- 🚀 Easy to extend or integrate backend later
+- 🎨 Clean & responsive UI design
+- 🚀 Easy to extend for API integration
+
+### ⚙ Backend (Server)
+- 🔐 Login flow using email
+- 🧩 Express.js REST API setup
+- 🗄 MongoDB / PostgreSQL ready (configurable)
+- 🌐 Cross-origin (CORS) enabled
+- 📁 Modular folder structure (controllers, routes, config)
 
 ---
 
 ## 🧩 Tech Stack
 
-- *Frontend:* React.js  
-- *Styling:* Tailwind CSS  
-- *Language:* JavaScript (JSX)
+| Layer | Technology |
+|-------|-------------|
+| **Frontend** | React.js + Tailwind CSS |
+| **Backend** | Node.js + Express.js |
+| **Database** | MongoDB or PostgreSQL (configurable) |
+| **Language** | JavaScript (JSX + ES6) |
+
+---
+
+## 📂 Folder Structure
+
+logiclead-fastag/
+│
+├── client/ # Frontend (React + Tailwind)
+│ ├── src/
+│ ├── public/
+│ ├── package.json
+│ └── ...
+│
+└── server/ # Backend (Express + DB)
+├── routes/
+├── controllers/
+├── models/
+├── config/
+├── server.js
+├── package.json
+└── ...
+
 
 ---
 
 ## ⚙ Installation and Setup
 
-Follow these steps to set up and run the project locally 👇
+Follow these steps to set up both **frontend and backend** locally 👇
 
 ### 1️⃣ Clone the Repository
-
 ```bash
-git clone https://github.com/your-username/logiclead-frontend.git
+git clone https://github.com/your-username/logiclead-fastag.git
 2️⃣ Move into the Project Folder
+cd logiclead-fastag
 
- cd logiclead-frontend
-
- 3️⃣ Install Dependencies
- npm install
-
- 🏃 Run the Project
-Start the app locally with:
-
+🖥️ Frontend Setup
+cd client
+npm install
 npm run dev
+⚙ Backend Setup
+cd ../server
+npm install
+noder server.js
+
+🔐 Environment Variables
+Create a .env file inside server/ with the following:
+
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
